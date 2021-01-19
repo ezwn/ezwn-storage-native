@@ -54,7 +54,7 @@ export const useStorage = (key, defaultProvider) => {
             setLoaded(true);
         }
         fetch();
-    }, []);
+    }, [key]);
 
     async function set(newState) {
         setState(await storage.set(newState));
